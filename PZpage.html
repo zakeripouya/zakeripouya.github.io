@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<!-- this is the main html page and contains the requirments for the header, paragraph, navigation bar, and html entity. -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me - Pouya Zakeri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div class="about-wrapper">
+        <div class="about-left">
+            <div class="about-left-content">
+                <div>
+                    <div class="shadow">
+                        <div class="about-img">
+                            <img src="./pic.jpg" alt="about image">
+                        </div>
+                    </div>
+
+                    <h2>Pouya Zakeri</h2>
+                    <h3>B.S Computer Science</h3>
+
+
+                    <div class="about-btns">
+
+                        <!-- need to fix the link so that it downloads                     -->
+                        <a href="./PouyaZakeri_Resume.pdf" download type="button" class="btn btn-white">resume</a>
+                        <a href="github://github.com/pouyazakeri" target="_blank" type="button"
+                            class="btn btn-white">Git
+                            hub</a>
+                        <a href="https://www.linkedin.com/in/pouya-zakeri-15404b198/" target="_blank" type="button"
+                            class="btn btn-white">LinkedIn</a>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="about-right">
+            <div class="about-para">
+
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./personal.html">Personal</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact.html">Contact Me</a>
+
+                </div>
+
+                <div id="main">
+                    <h1>About Me<span>:</span></h1>
+                    <p>My name is Pouya Zakeri, I am 18 years old and I am from Chico California. I am currently
+                        a senior at the Colorado School of Mines studying computer science. I am most interested in
+                        the
+                        machine learning
+                        and data science. I am a part of the Kappa Sigma Fraternity. I have a pet turtle. And I love
+                        edm.
+
+                        feel free to explore the website and learn a little more about me, I have a lot of cool
+                        projects
+                        that are worth taking a look at.
+                    </p>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; More Info</span>
+                </div>
+
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidenav").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "100px";
+                        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+                        document.getElementById("main").style.marginLeft = "0";
+                        document.body.style.backgroundColor = "white";
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
