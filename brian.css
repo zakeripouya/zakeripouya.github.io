@@ -1,0 +1,408 @@
+/* Major page sections laid out using CSS Grid (3)
+Uses grid template areas for content sections
+used for the open a ticket page^
+Header is laid out using Flexbox (2)
+Links in the header have a hover style (using :hover pseudo class) (3)
+Content section laid out using Flexbox (2)
+Buttons in the form are styled (2)
+Use any four other basic CSS styles (font, color, margin, padding ,etc) (4) */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+/* i also used some templates and referenced w3 and geeksk for geeks as well as code point for some styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="password"]:hover,
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #696666;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="password"]:hover,
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="password"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #000000;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+
+/* header */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+/* header code */
+
+/* Style the header with a grey background and some padding */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 30px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/* body */
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 10%;
+}
+
+
+/* footer */
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#263238; min-height:100px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+
+
+details {
+  width: 50%;
+  margin: 0 auto ;
+  background: #7a7a7a;
+  margin-bottom: .5rem;
+  box-shadow: 0 .1rem 1rem -.5rem rgba(194, 185, 185, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+summary {
+  padding: 1rem;
+  display: block;
+  background: #323f45;
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+summary:before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+
+/* THE MAGIC 🧙‍♀️ */
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details > ul {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+
+body {
+  background: #fff;
+  height: 100vh;
+  font-family: sans-serif;
+  color: white;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  /* margin-top: 2rem; */
+}
+
+/* grid for the centering of the ticket image */
+
+.imageticket {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns:  repeat(5, 150px);
+  grid-template-rows: repeat(5, 100px);
+  }
+
+.item1 {
+    grid-row: 2 / 5;
+    grid-column: 3 / 5; 
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 700px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
