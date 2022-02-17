@@ -1,3 +1,18 @@
+// Event listener for the static form on the base HTML page set to intercept "submit" events (2)
+// A fetch call to the Pokemon API (1)
+// Using a Promise chain (.then(() => { ... }) or async/await to parse the body and return the JSON (2)
+// Creating the Pokemon card (10)
+// An image tag with the src and alt attributes set
+// Some text with two pieces of information from the JSON response (i.e. the name and ID)
+// Add a form to update the displayed Pokemon
+// Add a text input with the name of the Pokemon pre-filled (use the "value" attribute on the element to pre-fill it)
+// Add a button allows for updating the displayed Pokemon
+// Add an event listener for the form that accepts a "submit" event
+// Inserting the Pokemon card into the page (2)
+// You may insert this at a specific place or just append it to the body
+// Updating an already added Pokemon (4)
+// The update event listener method should update the Pokemon image and text (Hint: Create a method that accepts the container element for the Pokemon image and text so you can easily get the children tags and update their attributes accordingly)
+
 let button = document.querySelector("#addPokemon");
 let input = document.querySelector("#pokemonName");
 

@@ -1,3 +1,5 @@
+/* Pokemon container/cards displayed using flexbox (1)
+flex-wrap rule used to flow the flexbox items to the next line (1) */
 #flex-container {
     display: flex;
     flex-wrap:wrap
